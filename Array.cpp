@@ -7,7 +7,7 @@ Axyre::Array<T, Size>::Array(const T[] values)
 }
 
 template<class T, size_t Size>
-Axyre::Array<T, size_t Size>::GetElement(const UInt ID)
+Axyre::Array<T, Size>::GetElement(const UInt ID)
 {
 	if (ID <= Size)
 		return Axyre::Array<T, Size>::Values[ID];
