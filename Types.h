@@ -8,7 +8,7 @@
 namespace Axyre 
 {
 	typedef void Void;
-	typedef void* Delegate;
+	typedef void* GPtr;
 	typedef bool Bit;
 	typedef float Single;
 	typedef double Double;
