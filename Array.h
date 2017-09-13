@@ -1,17 +1,26 @@
 #pragma once
 
 #include "Types.h"
+#include <initializer_list>
 
 namespace Axyre
 {
-	template<class T, size_t Size>
+	template<class T, const UInt Size>
 	class Array
 	{
 	private:
-		T* Values;
+		T Values[Size];
 	public:
 		Array(const T[]);
 
+		T Front();
+
+		T Back();
+
+		void Reset();
+
 		T GetElement(const UInt);
+
+		void SetElement(const UInt, const T);
 	};
 }
