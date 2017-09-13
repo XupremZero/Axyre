@@ -12,6 +12,11 @@ namespace Axyre
 		T Values[Size];
 	public:
 		Array(const T[]);
+		
+		T operator[](const UInt ID)
+		{
+			return Values[ID];
+		}
 
 		T Front();
 
