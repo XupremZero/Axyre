@@ -15,7 +15,8 @@ namespace Axyre
 		
 		T operator[](const UInt ID)
 		{
-			return Values[ID];
+			if(ID <= Size)
+				return Values[ID];
 		}
 
 		T Front();
