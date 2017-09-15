@@ -4,28 +4,30 @@
 
 namespace Axyre
 {
-	template<class T, const UInt Size>
-	class Array
-	{
-	private:
-		T Values[Size];
-	public:
-		Array(const T[]);
-		
-		T operator[](const UInt ID)
+	namespace Container{
+		template<class T, const UInt Size>
+		class Array
 		{
-			if(ID <= Size)
-				return Values[ID];
-		}
+		private:
+			T Values[Size];
+		public:
+			Array(const T[]);
+		
+			T operator[](const UInt ID)
+			{
+				if(ID <= Size)
+					return Values[ID];
+			}
 
-		T Front();
+			T Front();
 
-		T Back();
+			T Back();
 
-		void Reset();
+			void Reset();
 
-		T GetElement(const UInt);
+			T GetElement(const UInt);
 
-		void SetElement(const UInt, const T);
-	};
+			void SetElement(const UInt, const T);
+		};
+	}
 }
