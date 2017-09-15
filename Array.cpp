@@ -1,42 +1,42 @@
 #include "Array.h"
 
 template<class T, Axyre::UInt Size>
-Axyre::Array<T, Size>::Array(const T[] values)
+Axyre::Container::Array<T, Size>::Array(const T[] values)
 {
-	Axyre::Array<T, Size>::Values = values;
+	Axyre::Container::Array<T, Size>::Values = values;
 }
 
 template<class T, Axyre::UInt Size>
-T Axyre::Array<T, Size>::Back()
+T Axyre::Container::Array<T, Size>::Back()
 {
-	return Axyre::Array<T, Size>::Values[Size - 1];
+	return Axyre::Container::Array<T, Size>::Values[Size - 1];
 }
 
 template<class T, Axyre::UInt Size>
-T Axyre::Array<T, Size>::Front ()
+T Axyre::Container::Array<T, Size>::Front ()
 {
-	return Axyre::Array<T, Size>::Values[0];
+	return Axyre::Container::Array<T, Size>::Values[0];
 }
 
 template<class T, Axyre::UInt Size>
-void Axyre::Array<T, Size>::Reset()
+void Axyre::Container::Array<T, Size>::Reset()
 {
 	for (UInt aux = 0; aux < Size; aux++)
-		Axyre::Array<T, Size>::Values[aux] = 0;
+		Axyre::Container::Array<T, Size>::Values[aux] = 0;
 }
 
 template<class T, Axyre::UInt Size>
-T Axyre::Array<T, Size>::GetElement(const UInt ID)
+T Axyre::Container::Array<T, Size>::GetElement(const UInt ID)
 {
 	if (ID <= Size)
-		return Axyre::Array<T, Size>::Values[ID];
+		return Axyre::Container::Array<T, Size>::Values[ID];
 	else
 		return 0;
 }
 
 template<class T, Axyre::UInt Size>
-void Axyre::Array<T, Size>::SetElement(const UInt ID, const T NewValue)
+void Axyre::Container::Array<T, Size>::SetElement(const UInt ID, const T NewValue)
 {
 	if(ID <= Size)
-		Axyre::Array<T, Size>::Values[ID] = NewValue;
+		Axyre::Container::Array<T, Size>::Values[ID] = NewValue;
 }
